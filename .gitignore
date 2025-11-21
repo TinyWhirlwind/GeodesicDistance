@@ -39,3 +39,74 @@
 
 # debug information files
 *.dwo
+
+# Visual Studio 文件
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VC++ 编译中间文件
+*.obj
+*.o
+*.ilk
+*.pch
+*.pdb
+*.ipch
+*.tlog
+*.tmp
+*.log
+*.cachefile
+*.res
+*.idb
+*.opendb
+
+# 生成的可执行文件
+*.exe
+*.dll
+*.lib
+*.exp
+
+# 静态库、动态库中间产物
+*.iobj
+*.ipdb
+
+# 编译输出目录
+Debug/
+Release/
+x64/
+x86/
+ARM/
+ARM64/
+Bin/
+Build/
+out/
+
+# CMake 构建目录（如你有用）
+/build/
+/cmake-build-*/
+
+# 自动生成的项目
+*.VC.db
+*.VC.VC.opendb
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+
+# 忽略备份文件
+*.bak
+*.old
+
+# 忽略临时文件
+*.tmp
+*~
+*.swp
+
+# 忽略日志
+*.log
+
+# 忽略测试输出
+test-output/
