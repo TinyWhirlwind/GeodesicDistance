@@ -5,9 +5,9 @@ class GeodesicDistance
 {
 public:
     GeodesicDistance(CMeshO& mesh, CVertexO* sourcePoint);
-    GeodesicDistance();
     ~GeodesicDistance();
 
+    void SetTime();
 private:
     class PImpl;
     std::shared_ptr<PImpl> impl_;
