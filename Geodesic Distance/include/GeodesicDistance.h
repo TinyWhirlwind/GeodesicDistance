@@ -1,10 +1,13 @@
 #ifndef GEODESIC_DISTANCE_H
 #define GEODESIC_DISTANCE_H
 #include <mymesh.h>
+typedef OMesh::Point OPoint;
+typedef OMesh::VertexHandle OVertex;
+typedef OMesh::FaceHandle OFace;
 class GeodesicDistance
 {
 public:
-    GeodesicDistance(CMeshO& mesh, CVertexO* sourcePoint);
+    GeodesicDistance(std::shared_ptr<OMesh> mesh, OPoint sourcePoint);
     ~GeodesicDistance();
 
     void SetTime();

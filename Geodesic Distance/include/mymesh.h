@@ -7,7 +7,13 @@
 #include <OpenMesh/Core/Mesh/Traits.hh>
 #include <vcg/complex/algorithms/clean.h>
 #include <vcg/simplex/face/component_ep.h>
-typedef OpenMesh::TriMesh_ArrayKernelT<>  MyMesh;
+
+struct MyTraits : public OpenMesh::DefaultTraits
+{
+	VertexAttributes(OpenMesh::Attributes::Color | OpenMesh::Attributes::Normal);
+	FaceAttributes(OpenMesh::Attributes::Normal);
+};
+typedef OpenMesh::TriMesh_ArrayKernelT<MyTraits> OMesh;
 
 #define Scalarm double
 namespace vcg
@@ -190,10 +196,10 @@ public:
 		this->vert.EnableTexCoord();
 	}
 
-	MyMesh toOpenMesh()
+	OMesh toOpenMesh()
 	{
-		MyMesh openMesh;
-		std::vector<MyMesh::VertexHandle> vhandles;
+		OMesh openMesh;
+		std::vector<OMesh::VertexHandle> vhandles;
 		for (size_t i = 0; i < this->vert.size(); ++i)
 		{
 			if (!this->vert[i].IsD())
@@ -209,7 +215,7 @@ public:
 		{
 			if (!this->face[i].IsD())
 			{
-				std::vector<MyMesh::VertexHandle> face_vhandles;
+				std::vector<OMesh::VertexHandle> face_vhandles;
 				for (int j = 0; j < 3; ++j)
 				{
 					int index = vcg::tri::Index(*this, this->face[i].V(j));
