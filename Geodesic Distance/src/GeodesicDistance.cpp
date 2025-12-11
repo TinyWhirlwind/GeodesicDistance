@@ -208,35 +208,6 @@ void GeodesicDistance::PImpl::NormalizePhi(int source)
     _phi.array() -= offset;
 }
 
-void GeodesicDistance::PImpl::Show()
-{
-    _mesh->request_vertex_colors();
-
-    double minPhi = 1e30;
-    double maxPhi = -1e30;
-
-    for (auto v : _mesh->vertices())
-    {
-        double d = _phi[v.idx()];
-        minPhi = std::min(minPhi, d);
-        maxPhi = std::max(maxPhi, d);
-    }
-
-    for (auto v : _mesh->vertices())
-    {
-        double t = (_phi[v.idx()] - minPhi) / (maxPhi - minPhi);
-
-        OpenMesh::Vec3uc color(
-            (unsigned char)(255 * t),       // 红色：大
-            (unsigned char)(255 * (1 - t)), // 绿色：中
-            128                              // 蓝色：固定
-        );
-
-        _mesh->set_color(v, color);
-    }
-
-    _mesh->update_vertex_normals();
-}
 
 
 

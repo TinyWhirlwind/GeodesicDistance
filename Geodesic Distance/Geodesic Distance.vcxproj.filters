@@ -24,6 +24,9 @@
     <ClInclude Include="include\GeodesicDistance.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="include\OBVH.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\mymesh.cpp">
@@ -33,6 +36,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\GeodesicDistance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OBVH.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

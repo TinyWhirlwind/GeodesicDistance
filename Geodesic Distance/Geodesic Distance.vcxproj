@@ -22,11 +22,13 @@
     <ClInclude Include="include\base_type.h" />
     <ClInclude Include="include\GeodesicDistance.h" />
     <ClInclude Include="include\mymesh.h" />
+    <ClInclude Include="include\OBVH.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="include\main.cpp" />
     <ClCompile Include="src\GeodesicDistance.cpp" />
     <ClCompile Include="src\mymesh.cpp" />
+    <ClCompile Include="src\OBVH.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

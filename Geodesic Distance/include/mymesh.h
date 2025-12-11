@@ -7,7 +7,6 @@
 #include <OpenMesh/Core/Mesh/Traits.hh>
 #include <vcg/complex/algorithms/clean.h>
 #include <vcg/simplex/face/component_ep.h>
-
 struct MyTraits : public OpenMesh::DefaultTraits
 {
 	VertexAttributes(OpenMesh::Attributes::Color | OpenMesh::Attributes::Normal);

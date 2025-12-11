@@ -1,0 +1,1 @@
+typedef OpenMesh::Vec3f OVec;
